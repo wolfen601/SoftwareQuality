@@ -2,7 +2,5 @@ login
 admin
 create
 usernamethatistoolong
-shortusername
-AA
 logout
 quit

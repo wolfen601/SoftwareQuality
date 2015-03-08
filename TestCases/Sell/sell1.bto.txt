@@ -1,11 +1,10 @@
-Enter a command: login
-Enter username: buyeruser
+Enter a command:
+Enter username:
 buyeruser BS 000000000
 Log in successful!
-Enter a command: sell
+Enter a command:
 Error: Buy-only accounts cannot sell tickets
-Enter a command: logout
-000000000
+Enter a command:
 buyeruser has been logged out successfully
-Enter a command: quit
+Enter a command:
 

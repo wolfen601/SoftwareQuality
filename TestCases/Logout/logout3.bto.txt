@@ -3,7 +3,6 @@ Enter username:
 buyeruser BS 000000000
 Log in successful!
 Enter a command:
-000000000
 buyeruser has been logged out successfully
 Enter a command:
 

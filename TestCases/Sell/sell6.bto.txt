@@ -9,7 +9,6 @@ Error: max number of tickets to sell reached
 Enter number of tickets to sell:
 Enter the price of each ticket:
 Enter a command:
-000000000
 fulluser has been logged out successfully
 Enter a command:
 

@@ -1,6 +1,5 @@
 login
 buyeruser
 delete
-selleruser
 logout
 quit

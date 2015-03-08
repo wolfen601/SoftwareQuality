@@ -8,9 +8,6 @@ Error: max character limit of 25 reached
 Enter event title:
 Enter number of tickets to sell:
 Enter the price of each ticket:
-Error: max price on each ticket reached
-Enter the price of each ticket:
 Enter a command:
-000000000
 fulluser has been logged out successfully
 Enter a command:

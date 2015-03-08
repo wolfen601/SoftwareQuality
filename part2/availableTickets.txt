@@ -1,2 +1,5 @@
 Random Event------ admin---------- 010 005.00
 Second Event------ user1---------- 086 010.00
+qwer-------------- buyeruser------ 003 09.900
+4----------------- buyeruser------ 004 010000
+qwerty------------ buyeruser------ 101 01000.

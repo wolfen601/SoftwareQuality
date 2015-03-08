@@ -1,4 +1,10 @@
+Enter a command:
 Enter username:
-Login accepted!
-Enter new username:
-Error: user already exists
+admin AA 000000000
+Log in successful!
+Enter a command:
+Enter username of new account:
+Error username alreaady exists
+Enter a command:
+admin has been logged out successfully
+Enter a command:

@@ -6,8 +6,8 @@ Enter a command:
 Enter event title:
 Enter number of tickets to sell:
 Enter the price of each ticket:
+Ticket successfully registered!
 Enter a command:
-000000000
 selleruser has been logged out successfully
 Enter a command:
 
