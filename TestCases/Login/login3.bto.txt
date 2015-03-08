@@ -1,0 +1,3 @@
+Enter command:
+Enter username:
+Log in failed, user not found

@@ -1,0 +1,9 @@
+login
+fulluser
+sell
+eventNameThatisLongerthanlimit
+eventNameShort
+10
+99.99
+logout
+quit

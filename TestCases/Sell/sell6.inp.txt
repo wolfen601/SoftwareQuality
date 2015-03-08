@@ -1,0 +1,9 @@
+login
+fulluser
+sell
+eventName6
+101
+100
+99.99
+logout
+quit

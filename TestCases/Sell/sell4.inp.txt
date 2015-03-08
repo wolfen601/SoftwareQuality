@@ -1,0 +1,8 @@
+login
+admin
+sell
+eventName3
+10
+99.99
+logout
+quit

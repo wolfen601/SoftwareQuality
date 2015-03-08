@@ -1,0 +1,12 @@
+Enter a command:
+Enter username:
+admin AA 000000000
+Log in successful!
+Enter a command:
+Enter username of new account:
+Enter account type:
+Enter a command:
+000000000
+admin has been logged out successfully
+Enter a command:
+

@@ -1,0 +1,12 @@
+Enter a command: login
+Enter username: buyeruser
+buyeruser BS 000000000
+Log in successful!
+Enter a command:
+Enter the username of the account you want to delete:
+Error: This action can only be preformed by an admin
+Enter a command:
+000000000
+buyeruser has been logged out successfully
+Enter a command:
+

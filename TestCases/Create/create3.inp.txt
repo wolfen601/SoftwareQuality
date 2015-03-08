@@ -1,0 +1,7 @@
+login
+admin
+create
+buyeruser
+BS
+logout
+quit

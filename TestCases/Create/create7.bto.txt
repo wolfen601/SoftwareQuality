@@ -1,0 +1,6 @@
+Enter a command:
+Enter username:
+fulluser FS 000000000
+Log in successful!
+Enter a command:
+Error: Not an admin, cannot create accounts.

@@ -1,0 +1,3 @@
+eventName1-------- selleruser----- 010 99.99
+eventName1-------- fulluser------- 010 99.99
+eventName1-------- admin---------- 010 99.99

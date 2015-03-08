@@ -1,0 +1,15 @@
+Enter a command:
+Enter username:
+fulluser FS 000000000
+Log in successful!
+Enter a command:
+Enter event title:
+Enter number of tickets to sell:
+Error: max number of tickets to sell reached
+Enter number of tickets to sell:
+Enter the price of each ticket:
+Enter a command:
+000000000
+fulluser has been logged out successfully
+Enter a command:
+

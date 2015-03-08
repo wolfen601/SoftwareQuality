@@ -1,0 +1,4 @@
+01 fulluser------- FS 000000.00
+01 selleruser----- SS 000000.00
+01 buyeruser------ BS 000000.00
+01 adminuser------ AA 000000.00

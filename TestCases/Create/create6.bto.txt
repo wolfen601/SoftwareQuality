@@ -1,0 +1,4 @@
+Enter username:
+Login accepted!
+Enter new username:
+Error: user already exists
