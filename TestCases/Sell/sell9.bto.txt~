@@ -1,0 +1,12 @@
+Enter a command:
+Enter username:
+admin AA 000000000
+Log in successful!
+Enter a command:
+Enter event title:
+Enter number of tickets to sell:
+Enter the price of each ticket:
+Error: not a whole number (0-1000) exclusive
+Enter a command:
+fulluser has been logged out successfully
+Enter a command:

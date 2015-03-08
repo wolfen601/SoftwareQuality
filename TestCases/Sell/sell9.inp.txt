@@ -1,0 +1,8 @@
+login
+admin
+sell
+eventName6
+10
+qwewq
+logout
+quit

@@ -1,0 +1,8 @@
+login
+admin
+sell
+eventName4
+qwere
+99.99
+logout
+quit

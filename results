@@ -1,0 +1,9 @@
+login3 - segmentation fault (core dumped) - doesnt check if the user exists
+delete2 - segmentation fault (core dumped) - should check if they have permission to delete first
+delete3 - segmentation fault (core dumped) - should not loop
+sell1 - infinite loops - should not allow sell as a valid 
+sell5 - success should be failure - check max price
+sell6 - success should be failure - check max ticket amount
+sell7 - success should be failure - check max event title name
+sell8 - infinite loops - should check number is entered for number of tickets
+sell9 - infinite loops - should check number is entered for price of ticket
