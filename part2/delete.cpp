@@ -23,7 +23,6 @@ void remove(string* currentUser) {
 		cout << "Account successfully deleted." << endl;
 		removeUser(username);
 		removeSales(username);
-		break;
 	}
 }
 
