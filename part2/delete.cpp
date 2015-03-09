@@ -12,14 +12,15 @@ void removeSales(string username);
 //calls removeUser and removeSales functions
 void remove(string* currentUser) {
 	string username;
-
+	if(currentUser[1] != "AA") {
+		cout << "Error: This action can only be preformed by an admin" << endl;
+		return;
+	} 
 	cout << "Enter the username of the account you want to delete: ";
 	cin >> username;
 	if (username == currentUser[0]) {
 		cout << "Error: Cannot delete the currently logged in user" << endl;
-	} else if(currentUser[1] != "AA") {
-		cout << "Error: This action can only be preformed by an admin" << endl;
-	} else {
+	}else {
 		cout << "Account successfully deleted." << endl;
 		removeUser(username);
 		removeSales(username);
