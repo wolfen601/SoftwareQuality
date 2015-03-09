@@ -1,5 +1,2 @@
-Enter a command: Enter username: fulluser FS 000000000
-
-Log in successful!
-Enter a command: fulluser has been logged out successfully
-Enter a command: 
+Enter a command: Enter username: Log in failed, user not found
+Enter a command: Enter a command: 

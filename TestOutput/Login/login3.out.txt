@@ -1,1 +1,2 @@
-Enter a command: Enter username: 
+Enter a command: Enter username: Log in failed, user not found
+Enter a command: 

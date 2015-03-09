@@ -1,5 +1,5 @@
 Enter a command: Enter username: buyeruser BS 000000.00
 Log in successful!
-Enter a command: Error: This action can only be preformed by an admin
+Enter a command: Error: no selling priveledge!
 Enter a command: buyeruser has been logged out successfully
 Enter a command: 

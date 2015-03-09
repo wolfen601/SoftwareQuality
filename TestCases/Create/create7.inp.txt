@@ -1,3 +1,5 @@
 login
 fulluser
 create
+logout
+quit
