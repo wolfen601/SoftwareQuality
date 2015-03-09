@@ -1,0 +1,4 @@
+Enter a command: Enter username: admin AA 000000000
+Log in successful!
+Enter a command: admin has been logged out successfully
+Enter a command: 

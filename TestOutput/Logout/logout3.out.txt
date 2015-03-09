@@ -1,0 +1,4 @@
+Enter a command: Enter username: buyeruser BS 000000000
+Log in successful!
+Enter a command: buyeruser has been logged out successfully
+Enter a command: 
