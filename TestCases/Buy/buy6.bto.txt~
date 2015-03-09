@@ -1,0 +1,8 @@
+Enter Command: 
+Enter Username: 
+Login Successful!
+Enter Command: 
+Enter the name of the event: 
+Enter the amount of tickets: 
+Error: You are not authorized to buy more than 4 tickets at one time.
+Logout Successful!
