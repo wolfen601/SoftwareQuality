@@ -1,15 +1,21 @@
-Login:
-login3 - segmentation fault (core dumped) - doesnt check if the user exists
+Login: pass
+login3 - segmentation fault (core dumped) - doesnt check if the user exists - fix: checks if the user is in the list first
 
 Logout: pass
 
-Delete:
+Delete: pass
 delete2 - infinite loops - should check if they have permission to delete first - fix: checked for permission before asking for user to delete and returned if they did not have any permission
 
-Sell:
-sell1 - infinite loops - should not allow sell as a valid 
-sell5 - success should be failure - check max price
-sell6 - success should be failure - check max ticket amount
-sell7 - success should be failure - check max event title name
-sell8 - infinite loops - should check number is entered for number of tickets
-sell9 - infinite loops - should check number is entered for price of ticket
+Sell: pass
+sell1 - infinite loops - should not allow sell as a valid - fix: check that the user has permission first
+sell5 - success should be failure, check max price - fix: check boundaries
+sell6 - success should be failure, check max ticket amount - fix: check boundaries
+sell7 - success should be failure, check max event title name - fix: check boundaries
+sell8 - infinite loops - should check number is entered for number of tickets - fix: check correct input format
+sell9 - infinite loops - should check number is entered for price of ticket - fix: check correct input format
+
+Create: pass
+
+Buy:
+
+
