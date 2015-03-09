@@ -1,0 +1,15 @@
+Enter Command: 
+Enter Username: 
+Login Successful!
+Enter Command:
+List of possible commads:
+-login
+-logout
+-create
+-delete
+-sell
+-buy
+-refund
+-addcredit
+-search
+Logout Successful!

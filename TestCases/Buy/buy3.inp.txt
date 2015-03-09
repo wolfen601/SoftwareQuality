@@ -1,0 +1,8 @@
+login
+admin
+buy
+eventName
+4
+selleruser
+logout
+quit

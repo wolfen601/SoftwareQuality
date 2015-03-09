@@ -1,0 +1,7 @@
+Enter Command: 
+Enter Username: 
+Login Successful!
+Enter Command: 
+Enter the username you want to add credit to: 
+Enter amount of credit to add: 
+Error: User can only have a maximum of $999 999

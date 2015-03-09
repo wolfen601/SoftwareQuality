@@ -1,0 +1,6 @@
+login
+admin
+refund
+notAUser
+logout
+quit

@@ -1,0 +1,8 @@
+Enter Command: 
+Enter Username: 
+Enter Command: 
+Enter the name of the event you want to buy tickets for: 
+Enter the amount of tickets you want to buy: 
+Enter the seller's username: 
+Error: This seller does not have enough tickets to sell.
+Logout Successful!

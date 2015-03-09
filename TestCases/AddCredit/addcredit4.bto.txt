@@ -1,0 +1,7 @@
+Enter Command: 
+Enter Username: 
+Login successful!
+Enter Command: 
+Please enter the amount of credit you would like to add to your account: 
+Error: Can only add 1000 dollars at a time.
+Logout successful!

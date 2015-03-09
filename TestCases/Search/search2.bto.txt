@@ -1,0 +1,2 @@
+Please type the seller name or the event name:
+eventName1 selleruser 001 100.00

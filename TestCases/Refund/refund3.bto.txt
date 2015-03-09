@@ -1,0 +1,7 @@
+Enter Command: 
+Enter Username: 
+Login Successful!
+Enter Command:
+Enter the buyer's username: 
+Error: Buyer is not a current user.
+Logout Successful!

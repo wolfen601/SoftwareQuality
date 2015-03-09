@@ -1,0 +1,2 @@
+Please type the seller name or the event name:
+Error: Invalid input. No such event or user exists.

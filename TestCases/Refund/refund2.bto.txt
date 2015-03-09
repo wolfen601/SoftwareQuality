@@ -1,0 +1,6 @@
+Enter Command: 
+Enter Username: 
+Login Successful!
+Enter Command: 
+Error: You are not privleged to do that command.
+Logout Successful!

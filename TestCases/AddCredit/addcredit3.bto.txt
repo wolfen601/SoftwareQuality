@@ -1,0 +1,7 @@
+Enter Command: 
+Enter Username: 
+Login Successful!
+Enter Command:
+Enter the amount of credit you would like to add to your account: 
+100.00 successfully added to your account.
+Logout Successful!
