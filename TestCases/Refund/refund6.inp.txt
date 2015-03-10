@@ -2,7 +2,7 @@ login
 admin
 refund
 buyeruser
-selleruser
-thisisnotanumber
+brokeuser
+10
 logout
 quit

@@ -3,6 +3,6 @@ admin
 refund
 buyeruser
 selleruser
-50
+10
 logout
 quit

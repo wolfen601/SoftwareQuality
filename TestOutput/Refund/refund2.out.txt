@@ -1,2 +1,5 @@
-Enter a command: Enter username: Log in failed, user not found
-Enter a command: Enter a command: Enter a command: 
+Enter a command: Enter username: buyeruser BS 001010.00
+Log in successful!
+Enter a command: Error: This action can only be preformed by an admin
+Enter a command: buyeruser has been logged out successfully
+Enter a command: 
