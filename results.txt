@@ -17,10 +17,10 @@ sell9 - infinite loops - should check number is entered for price of ticket - fi
 
 Create: pass
 
-Refund:
+Refund: pass
 refund3 - infinite loops - should quit if the user is not there - fix: check if user exists
 
 Buy: pass
 
-AddCredit:
+AddCredit: pass
 addcredit2 - infinite loops

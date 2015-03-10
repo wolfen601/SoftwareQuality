@@ -5,6 +5,7 @@ Logout: pass
 
 Delete: pass
 delete2 - infinite loops - should check if they have permission to delete first - fix: checked for permission before asking for user to delete and returned if they did not have any permission
+delete4 - the user does not exist and core dumps - fix: check if the user is in the current users file
 
 Sell: pass
 sell1 - infinite loops - should not allow sell as a valid - fix: check that the user has permission first

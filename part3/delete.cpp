@@ -17,7 +17,7 @@ void remove(string* currentUser) {
 	string* deleteUser;
 
 	if(currentUser[1] != "AA") {
-		cout << "Error: This action can only be preformed by an admin" << endl;
+		cout << "Error: This action can only be performed by an admin" << endl;
 		return;
 	}
 
