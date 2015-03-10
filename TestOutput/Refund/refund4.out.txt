@@ -1,4 +1,4 @@
-Enter a command: Enter username: admin AA 999999.00
+Enter a command: Enter username: admin AA 001330.00
 Log in successful!
 Enter a command: Enter username of user to be refunded: Enter username of the other user: Error: both users must be existing users
 Enter a command: admin has been logged out successfully

@@ -1,6 +1,8 @@
-Enter Command: 
-Enter Username: 
-Login Successful!
-Enter Command: 
-Error: You are not privleged to do that command.
-Logout Successful!
+Enter a command: 
+Enter username: 
+Log in successful!
+Enter a command: 
+Error: This action can only be performed by an admin
+Enter a command: 
+buyeruser has been logged out successfully
+Enter a command: 

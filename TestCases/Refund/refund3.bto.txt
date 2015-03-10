@@ -1,7 +1,11 @@
-Enter Command: 
-Enter Username: 
-Login Successful!
-Enter Command:
-Enter the buyer's username: 
-Error: Buyer is not a current user.
-Logout Successful!
+Enter a command: 
+Enter username: 
+admin AA 999999.00
+Log in successful!
+Enter a command:
+Enter username of user to be refunded: 
+Enter username of the other user: 
+Error: both users must be existing users
+Enter a command: 
+admin has been logged out successfully
+Enter a command: 

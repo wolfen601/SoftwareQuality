@@ -1,5 +1,5 @@
-Enter a command: Enter username: admin AA 000000.00
+Enter a command: Enter username: admin AA 001330.00
 Log in successful!
-Enter a command: Enter username of user to be refunded: Enter username of the other user: Error: both users must be existing users
-Enter a command: Enter a command: admin has been logged out successfully
+Enter a command: Enter username of user to be refunded: Enter username of the other user: Enter the amount to refund: Credit refunded successfully
+Enter a command: admin has been logged out successfully
 Enter a command: 

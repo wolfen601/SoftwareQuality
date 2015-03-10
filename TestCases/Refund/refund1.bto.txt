@@ -7,6 +7,5 @@ Enter username of user to be refunded:
 Enter username of the other user: 
 Error: both users must be existing users
 Enter a command: 
-Enter a command: 
-admin has been logged otu successfully
+admin has been logged out successfully
 Enter a command: 
