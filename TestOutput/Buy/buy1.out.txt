@@ -1,2 +1,3 @@
-Enter a command: Enter username: Log in failed, user not found
-Enter a command: Enter a command: Enter a command: 
+Enter a command: Enter username: selleruser SS 000000.00
+Log in successful!
+Enter a command: Enter event title: Enter number of tickets to purchase: Enter sellers username: 

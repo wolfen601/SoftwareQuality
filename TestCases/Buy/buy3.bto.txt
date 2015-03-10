@@ -1,8 +1,11 @@
 Enter Command: 
 Enter Username: 
+admin AA 000000.00
 Enter Command: 
-Enter the name of the event you want to buy tickets for: 
-Enter the amount of tickets you want to buy: 
-Enter the seller's username: 
-Error: This seller does not have enough tickets to sell.
-Logout Successful!
+Enter event title: 
+Enter number of tickets to purchase: 
+Enter sellers username: 
+Error: Invalid purchase, ensure that event and seller name are correct, and that enough tickets are available
+Enter a command: 
+admin has been logged out successfully
+Enter a command: 

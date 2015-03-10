@@ -1,7 +1,9 @@
-Enter Command: 
-Enter Username: 
-Login Successful!
-Enter Command: 
-Error: Your account type does not allow ticket purchase.
-Logout Successful!
-Sesstion Terminated!
+Enter a command: 
+Enter username: 
+selleruser SS 000000.00
+Log in successful!
+Enter a command: 
+Error: Sell standard account cannot buy tickets.
+Enter a command: 
+selleruser has been logged out successfully
+Enter a command: 

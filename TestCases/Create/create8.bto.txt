@@ -4,7 +4,7 @@ admin AA 000000000
 Log in successful!
 Enter a command:
 Enter username of new account:
-Error: username must be at least 3 characters
+Error username must be at least 3 characters
 Enter a command:
 admin has been logged out successfully
 Enter a command:

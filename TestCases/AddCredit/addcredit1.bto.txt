@@ -1,8 +1,11 @@
-Enter Command: 
-Enter Username: 
-Login successful!
-Enter Command: 
-Enter the username you want to add credit to: 
+Enter a command: 
+Enter username: 
+admin AA 999999.00
+Log in successful!
+Enter a command: 
+Enter the user you want to add credit to: 
 Enter the amount of credit to add: 
-100.00 added to buyeruser successfully.
-Logout successful!
+Credit added successfully.
+Enter a command:  
+admin has been logged out successfully
+Enter a command: 

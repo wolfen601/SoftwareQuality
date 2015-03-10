@@ -1,10 +1,10 @@
 Enter a command: 
 Enter username: 
-admin AA 999999.00
-Log in successful!
+Log in Successful!
 Enter a command: 
 Enter the user you want to add credit to: 
-Error: User must be existing user
-Enter a command: 
+Enter amount of credit to add: 
+Error: Transaction causes you to exceed to max credit limit
+Enter a command:
 admin has been logged out successfully
 Enter a command: 

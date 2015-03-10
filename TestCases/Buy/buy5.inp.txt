@@ -1,8 +1,8 @@
 login
 admin
 buy
-eventName
-99
-selleruser
+Second Event
+5
+admin
 logout
 quit
