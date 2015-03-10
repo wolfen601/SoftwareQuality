@@ -1,6 +1,5 @@
 #include <iostream>
 #include <string>
-//#include <sstream>
 #include <fstream>
 
 using namespace std;
@@ -10,6 +9,7 @@ bool buyTickets(string* currentUser, string eventTitle,int tickets,string seller
 void subtractTickets(string eventTitle, int tickets,int currentTickets);
 void subtractCredit(string* currentUser,int totalPrice);
 string addPadding(int token);
+void dtfUpdater(string opCode,string user1,string str,string type,double credit,int tickets);
 
 //asks for event title, number of tickets and sellers username
 //calls the buyTickets funciton
@@ -44,8 +44,9 @@ bool buyTickets(string* currentUser,string eventTitle,int tickets,string seller)
 	string ticketsString;
 	int ticketCompare;
 	string price;
-	int ticketPrice;
+	double ticketPrice;
 	string fileLine;
+	double credit;
 
 	ifstream inputfile("availableTickets.txt");
 
@@ -55,24 +56,30 @@ bool buyTickets(string* currentUser,string eventTitle,int tickets,string seller)
 		sellerCompare = fileLine.substr(19,15);
 		ticketsString = fileLine.substr(35,3);
 		ticketCompare = stoi(ticketsString);
-		cout << ticketCompare << endl;
 		//istringstream iss(fileLine);
 
 		titleCompare = removePadding(titleCompare);
 		sellerCompare = removePadding(sellerCompare);
 		if((eventTitle == titleCompare) && (tickets <= ticketCompare) && (seller == sellerCompare)) {
+			cout << ticketCompare << " Tickets available" << endl;
 			string confirm;
 			price = fileLine.substr(39,6);
-			ticketPrice = stoi(price);
+			ticketPrice = stod(price);
 			cout << "Event found: price per ticket -> " << ticketPrice 
-				<< " Total price -> " << ticketPrice*tickets <<	endl
-				<< "Do you want to complete this purchase (yes or no): ";
+				<< " Total price -> " << ticketPrice*tickets <<	endl;
+			
+			credit = stod(currentUser[2]);
+			if(tickets*ticketPrice > credit) {
+				cout << "Error: Not enough credit to complete purchase" << endl;
+			}
+			cout << "Do you want to complete this purchase (yes or no): ";
 			cin >> confirm;
 			if(confirm == "yes") {
 				subtractTickets(eventTitle,tickets,ticketCompare);
 				subtractCredit(currentUser,ticketPrice*tickets);
 				inputfile.close();
 				cout << "Purchase successful!" << endl;
+				dtfUpdater("04",seller,eventTitle,"",ticketPrice,tickets);
 				return true;
 			} else if(confirm == "no") {
 				cout << "Transaction cancelled" << endl;
@@ -84,6 +91,7 @@ bool buyTickets(string* currentUser,string eventTitle,int tickets,string seller)
 			}
 		}
 	}
+	cout << "Error: Invalid purchase, ensure that event and seller name are correct, and that enough tickets are available" << endl;
 }
 
 //reads the available tickets file in line by line, checks if the event on each
@@ -110,7 +118,7 @@ void subtractTickets(string eventTitle,int tickets,int currentTickets) {
 		file += fileLine;
 		file += "\n";
 	}
-	cout << file << endl;
+	//cout << file << endl;
 	inputfile.close();
 	ofstream output("availableTickets.txt");
 	output << file << endl;
@@ -139,7 +147,7 @@ void subtractCredit(string* currentUser,int totalPrice) {
 		file += fileLine;
 		file += "\n";
 	}
-	cout << file << endl;
+	//cout << file << endl;
 	inputfile.close();
 	ofstream output("currentUsers.txt");
 	output << file << endl;

@@ -1,4 +1,2 @@
-Random Event------ admin---------- 010 005.00
+Random Event------ admin---------- 002 005.00
 Second Event------ user1---------- 086 010.00
-eventName1-------- selleruser----- 010 099.99
-eventName3-------- admin---------- 010 099.99

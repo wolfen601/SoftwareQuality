@@ -10,6 +10,7 @@ string addPadding(string type,string username);
 string addPadding(int credit);
 string addPadding(string type,double token);
 string removePadding(string token);
+void dtfUpdater(string opCode,string user1,string str,string type,double credit,int tickets);
 
 //asks user for event title, number of tickets to sell, and price of a ticket
 //calls the findEvent function, if false is returned the sellTickets function
@@ -19,10 +20,6 @@ void sell(string* currentUser) {
 	double price;
 	int tickets;
 	string clear;
-	if(currentUser[1] == "BS"){
-		cout << "Error: no selling priveledge!" << endl;
-		return;
-	}
 	getline(cin,clear);
 	cout << "Enter event title: ";
 	getline(cin,eventTitle);
@@ -49,7 +46,7 @@ void sell(string* currentUser) {
 
 	cout << "Enter the price of each ticket: ";
 	if (cin >> price) {
-		cout << price << endl;
+
 	} else {
 		cout << "Error: price must be entered as number" << endl;
 		cin.clear();
@@ -59,8 +56,8 @@ void sell(string* currentUser) {
 		cout << "Error: max price on each ticket exceeded" << endl;
 		return;
 	}
-	cout << price << endl;
 	sellTickets(currentUser,eventTitle,price,tickets);
+	dtfUpdater("03",currentUser[0],eventTitle,"",price,tickets);
 }
 
 //adds the event info to the available tickets file

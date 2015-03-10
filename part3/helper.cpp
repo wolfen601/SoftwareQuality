@@ -77,15 +77,27 @@ string addPadding(string type,double token) {
 //updates the daily transaction file
 //if statement determines how the data is written based on what data is in the transaction
 //whether a transaction log has 1 or 2 users etc..
-void dtfUpdater(string opCode,string username,string type_user2,double credit) {
+void dtfUpdater(string opCode,string user1,string str,string type,double credit,int tickets) {
 	ofstream output("dailyTransactionFile.txt",ios_base::app);
+	string creditString;
+	string ticketString;
 	if((opCode == "01") || (opCode == "02") || (opCode == "06") || (opCode == "00")) {
-		string creditString;
-		output << opCode << " ";
-		username = addPadding("username",username);
-		output << username << " " << type_user2 << " ";
+		creditString;
+		output << endl << opCode << " ";
+		user1 = addPadding("username",user1);
+		output << user1 << " " << type << " ";
 		creditString = addPadding("credit",credit);
-		output << creditString << endl;
+		output << creditString;
+	} else if(opCode == "05") {
+		output << endl << opCode << " ";
+	} else if((opCode == "03") || (opCode == "04")) {
+		output << endl << opCode << " ";
+		str = addPadding("event",str);
+		user1 = addPadding("username",user1);
+		creditString = addPadding("price",credit);
+		ticketString = addPadding(tickets);
+		output << str << " " << user1 << " " << ticketString
+			<< " " << creditString;
 	}
 	output.close();
 }

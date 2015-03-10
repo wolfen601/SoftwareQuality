@@ -6,7 +6,7 @@ using namespace std;
 
 //from login: check if user already exists
 string* findUser(string username);
-void dtfUpdater(string opCode,string username,string type,double credit);
+void dtfUpdater(string opCode,string user1,string str,string type,double credit,int tickets);
 string addPadding(string type,string username);
 string addPadding(string type,double token);
 
@@ -55,6 +55,6 @@ void create(string* currentUser) {
 	output.close();
 
 	//double balance = 0;
-	dtfUpdater("01",username,type,0);
+	dtfUpdater("01",username,"",type,0,0);
 	cout << "Account successfully created!" << endl;
 }

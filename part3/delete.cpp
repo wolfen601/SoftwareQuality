@@ -6,12 +6,15 @@ using namespace std;
 
 void removeUser(string username);
 void removeSales(string username);
+string* findUser(string username);
+void dtfUpdater(string opCode,string user1,string str,string type,double credit,int tickets);
 
 //checks if user has permission to delete
 //checks if the logged in user is the one being deleted
 //calls removeUser and removeSales functions
 void remove(string* currentUser) {
 	string username;
+	string* deleteUser;
 
 	if(currentUser[1] != "AA") {
 		cout << "Error: This action can only be preformed by an admin" << endl;
@@ -20,12 +23,15 @@ void remove(string* currentUser) {
 
 	cout << "Enter the username of the account you want to delete: ";
 	cin >> username;
+	deleteUser = findUser(username);
 	if (username == currentUser[0]) {
 		cout << "Error: Cannot delete the currently logged in user" << endl;
 	} else {
 		cout << "Account successfully deleted." << endl;
 		removeUser(username);
 		removeSales(username);
+		double credit = stod(deleteUser[2]);
+		dtfUpdater("02",username,"",deleteUser[1],credit,0);
 	}
 }
 
