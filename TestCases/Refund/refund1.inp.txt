@@ -1,8 +1,8 @@
 login
 admin
 refund
-buyuser
+buyeruser
 selleruser
-1
+100
 logout
 quit

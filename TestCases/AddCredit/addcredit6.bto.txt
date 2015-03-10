@@ -1,0 +1,16 @@
+Enter Command: 
+Enter Username: 
+admin AA 000000000
+Login Successful!
+Enter Command: 
+Enter the username you want to add credit to: 
+Enter amount of credit to add: 
+Enter Command: 
+Credit added successfully
+Enter the username you want to add credit to: 
+Enter amount of credit to add: 
+Credit added successfully
+Enter Command: 
+Enter the username you want to add credit to: 
+Enter amount of credit to add: 
+Error: Can only add 1000 dollars of credit at once

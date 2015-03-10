@@ -1,0 +1,13 @@
+login
+admin
+addcredit
+buyeruser
+900.00
+addcredit
+buyeruser
+100.00
+addcredit
+buyeruser
+100.00
+logout
+quit
