@@ -20,6 +20,12 @@ void sell(string* currentUser) {
 	double price;
 	int tickets;
 	string clear;
+
+	if(currentUser[1] == "BS") {
+		cout << "Error: Buy standard users cannot sell tickets" << endl;
+		return;
+	}
+
 	getline(cin,clear);
 	cout << "Enter event title: ";
 	getline(cin,eventTitle);

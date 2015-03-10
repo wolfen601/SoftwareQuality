@@ -1,4 +1,4 @@
-Enter a command: Enter username: admin AA 001500.00
+Enter a command: Enter username: admin AA 000000.00
 Log in successful!
 Enter a command: Enter username of new account: Error: username exceeds 15 characters
 Enter a command: admin has been logged out successfully

@@ -1,0 +1,5 @@
+Enter a command: Enter username: admin AA 999999.00
+Log in successful!
+Enter a command: Enter event title: Second EventEnter number of tickets to purchase: 1Enter sellers username: user1Error: Invalid purchase, ensure that event and seller name are correct, and that enough tickets are available
+Enter a command: admin has been logged out successfully
+Enter a command: 

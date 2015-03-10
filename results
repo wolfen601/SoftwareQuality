@@ -1,0 +1,35 @@
+Login: pass
+login3 - segmentation fault (core dumped) - doesnt check if the user exists - fix: checks if the user is in the list first
+
+Logout: pass
+
+Delete: pass
+delete2 - infinite loops - should check if they have permission to delete first - fix: checked for permission before asking for user to delete and returned if they did not have any permission
+
+Sell: pass
+sell1 - infinite loops - should not allow sell as a valid - fix: check that the user has permission first
+sell5 - success should be failure, check max price - fix: check boundaries
+sell6 - success should be failure, check max ticket amount - fix: check boundaries
+sell7 - success should be failure, check max event title name - fix: check boundaries
+sell8 - infinite loops - should check number is entered for number of tickets - fix: check correct input format
+sell9 - infinite loops - should check number is entered for price of ticket - fix: check correct input format
+
+Create: pass
+
+Refund:
+refund3 - infinite loops - should quit if the user is not there - fix: check if user exists
+
+Buy:
+buy 1 - login failed. Wrong username was used. Didn't check for seller user. Stuck in loop.
+buy 2 - puchase failed. Seller username did not exist. Changed username to match with the available tickets file. error. throwing an instance of "std::out_of_range" (Core Dump)
+buy 3 - error. throwing an instance of "std::out_of_range" (Core Dump)
+buy 4 - purchase failed. Seller username did not exist. Changed username to match with the avilable tickets file.
+buy 5 - purchase failed. Seller username did not exist. Changed username to match with the avilable tickets file. error. throwing an instance of "std::out_of_range" (Core Dump)
+buy 6 - Failed. Wrong login username.
+
+AddCredit:
+addcredit1 - user did not exist - fix: added user in the currentUser.txt
+addcredit2 - pass
+addcredit3 - throwing an instance of 'std::invalid_argument' (Core dump).
+addcredit4 - error: input was wrong, didn't add more than 1000 - fix: changed input.
+addcredit5 - error: input was wrong, didn't add credit to correct user - fix: changed input to admin

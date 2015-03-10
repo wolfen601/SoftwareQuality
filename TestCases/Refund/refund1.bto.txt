@@ -1,9 +1,12 @@
-Enter Command: 
-Enter Username: 
-Login Successful!
-Enter Command: 
-Enter the buyer's username: 
-Enter the seller's username: 
-Enter the amount of tickets refunded: 
-Refund is successful! Total money refunded: $100.00
-Logout Successful!
+Enter a command: 
+Enter username: 
+admin AA 999999.00
+Log in successful!
+Enter a command: 
+Enter username of user to be refunded: 
+Enter username of the other user: 
+Error: both users must be existing users
+Enter a command: 
+Enter a command: 
+admin has been logged otu successfully
+Enter a command: 

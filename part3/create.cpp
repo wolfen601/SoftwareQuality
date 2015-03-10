@@ -46,7 +46,7 @@ void create(string* currentUser) {
 	} 
 	cout << "Enter account type: ";
 	cin >> type;
-	if(type != "AA" && type != "FS" && type != "SS" && type != "BS" &&){
+	if(type != "AA" && type != "FS" && type != "SS" && type != "BS"){
 		cout << "Error: account type is not valid" << endl;
 		return;
 	}

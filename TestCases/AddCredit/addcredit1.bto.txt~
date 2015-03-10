@@ -4,7 +4,9 @@ admin AA 999999.00
 Log in successful!
 Enter a command: 
 Enter the user you want to add credit to: 
-Error: User must be existing user
+Enter the amount of credit to add: 
+Credit added successfully.
+Enter a command: 
 Enter a command: 
 admin has been logged out successfully
 Enter a command: 
