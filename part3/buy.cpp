@@ -28,7 +28,13 @@ void buy(string* currentUser) {
 	cout << "Enter event title: ";
 	getline(cin,eventTitle);
 	cout << "Enter number of tickets to purchase: ";
-	cin >> tickets;
+	if(cin >> tickets) {
+
+	} else {
+		cout << "Error: tickets must be entered as a number" << endl;
+		cin.clear();
+		return;
+	}
 	cout << "Enter sellers username: ";
 	cin >> seller;
 
