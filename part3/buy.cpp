@@ -29,7 +29,6 @@ void buy(string* currentUser) {
 	getline(cin,eventTitle);
 	cout << "Enter number of tickets to purchase: ";
 	if(cin >> tickets) {
-
 	} else {
 		cout << "Error: tickets must be entered as a number" << endl;
 		cin.clear();
@@ -77,10 +76,14 @@ bool buyTickets(string* currentUser,string eventTitle,int tickets,string seller)
 			ticketPrice = stod(price);
 			cout << "Event found: price per ticket -> " << ticketPrice 
 				<< " Total price -> " << ticketPrice*tickets <<	endl;
-			
+			if(ticket > ticketCompare){
+				cout << "Error: Ticket amount entered exceeds the amount of tickets available" << endl;
+				return false;
+			}
 			credit = stod(currentUser[2]);
 			if(tickets*ticketPrice > credit) {
 				cout << "Error: Not enough credit to complete purchase" << endl;
+				return false;
 			}
 			cout << "Do you want to complete this purchase (yes or no): ";
 			cin >> confirm;
