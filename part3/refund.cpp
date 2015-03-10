@@ -74,6 +74,6 @@ void refund(string* currentUser) {
 		cout << "Credit refunded successfully" << endl;
 		dtfUpdater("05",user1Info[0],user2Info[0],"",credit,0);
 	} else {
-		cout << "Error: This action can only be preformed by an admin" << endl;
+		cout << "Error: This action can only be performed by an admin" << endl;
 	}
 }
