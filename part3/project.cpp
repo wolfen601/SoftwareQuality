@@ -12,6 +12,8 @@ void dtfUpdater(string opCode,string user1,string str,string type,double credit,
 void remove(string* currentUser);
 void refund(string* currentUser);
 int addcredit(string* currentUser,int session);
+void search();
+void help();
 
 //Compile program using the included makefile which compiles all files with c++11 enabled
 // >>make
@@ -58,7 +60,12 @@ int main() {
 				session = addcredit(currentUser,session);
 			} else if(command == "refund") {
 				refund(currentUser);
-			} else if(command == "logout") {
+			} else if(command == "help") {
+				cout << "\n\nAvailable commands" << endl;
+				printf("buy\nsell\naddcredit\ndelete\ncreate\nsearch\nrefund\nlogout\n");
+			} else if(command == "search") {
+				search();
+			}else if(command == "logout") {
 				//converts users credit to int and calls dtfUpdater
 				//sets loggedIn boolean to false so the program returns
 				//to the outer while loop

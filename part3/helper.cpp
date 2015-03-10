@@ -81,17 +81,18 @@ void dtfUpdater(string opCode,string user1,string str,string type,double credit,
 	ofstream output("dailyTransactionFile.txt",ios_base::app);
 	string creditString;
 	string ticketString;
+	output << endl << opCode << " ";
 	if((opCode == "01") || (opCode == "02") || (opCode == "06") || (opCode == "00")) {
-		creditString;
-		output << endl << opCode << " ";
 		user1 = addPadding("username",user1);
 		output << user1 << " " << type << " ";
 		creditString = addPadding("credit",credit);
 		output << creditString;
 	} else if(opCode == "05") {
-		output << endl << opCode << " ";
+		user1 = addPadding("username",user1);
+		str = addPadding("username",str);
+		creditString = addPadding("credit",credit);
+		output << user1 << " " << str << " " << creditString;
 	} else if((opCode == "03") || (opCode == "04")) {
-		output << endl << opCode << " ";
 		str = addPadding("event",str);
 		user1 = addPadding("username",user1);
 		creditString = addPadding("price",credit);

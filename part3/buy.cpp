@@ -19,6 +19,10 @@ void buy(string* currentUser) {
 	string seller;
 	bool confirm;
 
+	if(currentUser[1] == "SS") {
+		cout << "Error: Sell standard account cannot buy tickets." << endl;
+		return;
+	}
 	string clear;
 	getline(cin,clear);
 	cout << "Enter event title: ";
