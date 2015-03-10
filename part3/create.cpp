@@ -46,7 +46,10 @@ void create(string* currentUser) {
 	} 
 	cout <<"Enter account type: ";
 	cin >> type;
-
+	if(type != "AA" || type != "SS" || type != "BS" || type != "FS"){
+		cout << "Error: account type is not valid" << endl;
+		return;
+	}
 	ofstream output("currentUsers.txt",ios_base::app);
 
 	username = addPadding("username",username);

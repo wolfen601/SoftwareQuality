@@ -1,5 +1,7 @@
 Enter a command: Enter username: admin AA 000000.00
 Log in successful!
 Enter a command: Enter the user you want to add credit too: Error: User must be existing user
+Enter a command: Enter a command: Enter the user you want to add credit too: Error: User must be existing user
+Enter a command: Enter a command: Enter the user you want to add credit too: Error: User must be existing user
 Enter a command: Enter a command: admin has been logged out successfully
 Enter a command: 

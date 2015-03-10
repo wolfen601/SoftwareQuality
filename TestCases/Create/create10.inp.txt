@@ -1,0 +1,7 @@
+login
+admin
+create
+goodUser
+butts
+logout
+quit
