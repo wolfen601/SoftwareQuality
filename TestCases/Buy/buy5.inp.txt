@@ -3,6 +3,6 @@ admin
 buy
 Second Event
 5
-admin
+user1
 logout
 quit
