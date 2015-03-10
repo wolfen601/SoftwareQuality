@@ -26,9 +26,7 @@ void remove(string* currentUser) {
 	deleteUser = findUser(username);
 	if (username == currentUser[0]) {
 		cout << "Error: Cannot delete the currently logged in user" << endl;
-	} else if(username != deleteUser[0]){
-		cout << "Error: The user does not exist" << endl;
-	}else{
+	} else {
 		cout << "Account successfully deleted." << endl;
 		removeUser(username);
 		removeSales(username);
@@ -57,11 +55,27 @@ void removeUser(string username) {
 	inputfile.close();
 	ofstream output("currentUsers.txt");
 	output << file;
+	output.close();
 }
 
-//this function will work similarly reading through the available
+//this function works similarly reading through the available
 //tickets file, if the event was created by the user being deleted
 //that line will be skipped while all other lines are copied
 void removeSales(string username) {
+	ifstream inputfile("availableTickets.txt");
+	string fileLine;
+	string file = "";
+	while(!inputfile.eof()) {
+		getline(inputfile,fileLine);
+		if(fileLine.find(username) != string::npos) {
 
+		} else {
+			file += fileLine;
+			file += "\n";
+		}
+	}
+	inputfile.close();
+	ofstream output("availableTickets.txt");
+	output << file;
+	output.close();
 }
