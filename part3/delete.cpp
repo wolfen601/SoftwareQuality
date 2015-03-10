@@ -26,6 +26,8 @@ void remove(string* currentUser) {
 	deleteUser = findUser(username);
 	if (username == currentUser[0]) {
 		cout << "Error: Cannot delete the currently logged in user" << endl;
+	} else if(username != deleteUser[0]){
+		cout << "Error: The user does not exist" << endl;
 	} else {
 		cout << "Account successfully deleted." << endl;
 		removeUser(username);
