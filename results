@@ -5,7 +5,6 @@ Logout: pass
 
 Delete: pass
 delete2 - infinite loops - should check if they have permission to delete first - fix: checked for permission before asking for user to delete and returned if they did not have any permission
-delete4 - the user does not exist and core dumps - fix: check if the user is in the current users file
 
 Sell: pass
 sell1 - infinite loops - should not allow sell as a valid - fix: check that the user has permission first
@@ -20,7 +19,13 @@ Create: pass
 Refund:
 refund3 - infinite loops - should quit if the user is not there - fix: check if user exists
 
-Buy: pass
+Buy:
+buy 1 - login failed. Wrong username was used. Didn't check for seller user. Stuck in loop.
+buy 2 - puchase failed. Seller username did not exist. Changed username to match with the available tickets file. error. throwing an instance of "std::out_of_range" (Core Dump)
+buy 3 - error. throwing an instance of "std::out_of_range" (Core Dump)
+buy 4 - purchase failed. Seller username did not exist. Changed username to match with the avilable tickets file.
+buy 5 - purchase failed. Seller username did not exist. Changed username to match with the avilable tickets file. error. throwing an instance of "std::out_of_range" (Core Dump)
+buy 6 - Failed. Wrong login username.
 
 AddCredit:
 addcredit2 - infinite loops
