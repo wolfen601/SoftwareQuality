@@ -19,16 +19,17 @@ void sell(string* currentUser) {
 	string eventTitle;
 	double price;
 	int tickets;
-	string clear;
+	//string clear;
 
 	if(currentUser[1] == "BS") {
 		cout << "Error: Buy standard users cannot sell tickets" << endl;
 		return;
 	}
 
-	getline(cin,clear);
+	//getline(cin,clear);
 	cout << "Enter event title: ";
-	getline(cin,eventTitle);
+	//getline(cin,eventTitle);
+	cin >> eventTitle;
 	if(eventTitle.length() > 25) {
 		cout << "Error: max character limit of 25 exceeded" << endl;
 		return;

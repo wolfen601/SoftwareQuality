@@ -1,2 +1,6 @@
+login
+admin
 search
 selleruser
+logout
+quit

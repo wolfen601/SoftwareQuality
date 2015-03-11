@@ -7,10 +7,10 @@ using namespace std;
 void search() {
 	string search;
 	cout << "Enter event name or seller username to search: ";
-	string clear;
-	getline(cin,clear);
-	getline(cin,search);
-
+	//string clear;
+	//getline(cin,clear);
+	//getline(cin,search);
+	cin >> search;
 	ifstream inputfile("availableTickets.txt");
 	string fileLine;
 	while(!inputfile.eof()) {

@@ -7,3 +7,5 @@
 ./a.out < ../TestCases/Sell/sell5.inp.txt > ../TestOutput/Sell/sell5.out.txt
 ./a.out < ../TestCases/Sell/sell6.inp.txt > ../TestOutput/Sell/sell6.out.txt
 ./a.out < ../TestCases/Sell/sell7.inp.txt > ../TestOutput/Sell/sell7.out.txt
+./a.out < ../TestCases/Sell/sell8.inp.txt > ../TestOutput/Sell/sell8.out.txt
+./a.out < ../TestCases/Sell/sell9.inp.txt > ../TestOutput/Sell/sell9.out.txt

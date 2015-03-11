@@ -1,2 +1,6 @@
+login
+admin
 search
 eventName1
+logout
+quit
