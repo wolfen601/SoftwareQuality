@@ -1,3 +1,5 @@
-Enter a command: Enter username: selleruser SS 000000.00
+Enter a command: Enter username: selleruser SS 000980.00
 Log in successful!
-Enter a command: Enter event title: Enter number of tickets to purchase: Enter sellers username: 
+Enter a command: Error: Sell standard account cannot buy tickets.
+Enter a command: selleruser has been logged out successfully
+Enter a command: 

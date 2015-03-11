@@ -8,8 +8,9 @@ string removePadding(string token);
 bool buyTickets(string* currentUser, string eventTitle,int tickets,string seller);
 void subtractTickets(string eventTitle, int tickets,int currentTickets);
 void subtractCredit(string* currentUser,int totalPrice);
-string addPadding(int token);
+string addPadding(string type, double token);
 void dtfUpdater(string opCode,string user1,string str,string type,double credit,int tickets);
+string addPadding(int token);
 
 //asks for event title, number of tickets and sellers username
 //calls the buyTickets funciton
@@ -76,7 +77,7 @@ bool buyTickets(string* currentUser,string eventTitle,int tickets,string seller)
 			ticketPrice = stod(price);
 			cout << "Event found: price per ticket -> " << ticketPrice 
 				<< " Total price -> " << ticketPrice*tickets <<	endl;
-			if(ticket > ticketCompare){
+			if(tickets > ticketCompare){
 				cout << "Error: Ticket amount entered exceeds the amount of tickets available" << endl;
 				return false;
 			}
@@ -146,7 +147,7 @@ void subtractCredit(string* currentUser,int totalPrice) {
 	ifstream inputfile("currentUsers.txt");
 	string fileLine;
 	string file = "";
-	int balanceInt;
+	double balanceInt;
 	string balanceString;
 
 	while(!inputfile.eof()) {
@@ -154,7 +155,7 @@ void subtractCredit(string* currentUser,int totalPrice) {
 		if(fileLine.find(currentUser[0]) != string::npos) {
 			balanceInt = stoi(currentUser[2]);
 			balanceInt = balanceInt - totalPrice;
-			balanceString = addPadding(balanceInt);
+			balanceString = addPadding("credit", balanceInt);
 			fileLine.replace(19,9,balanceString);
 		}
 		file += fileLine;

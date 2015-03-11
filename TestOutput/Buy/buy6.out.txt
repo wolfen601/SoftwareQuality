@@ -1,2 +1,5 @@
-Enter a command: Enter username: Log in failed, user not found
-Enter a command: Enter a command: Enter a command: Enter a command: Enter a command: Enter a command: Enter a command: 
+Enter a command: Enter username: brokeuser FS 000000.00
+Log in successful!
+Enter a command: Enter event title: Enter number of tickets to purchase: Enter sellers username: Error: Invalid purchase, ensure that event and seller name are correct, and that enough tickets are available
+Enter a command: brokeuser has been logged out successfully
+Enter a command: 

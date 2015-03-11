@@ -6,6 +6,8 @@ Enter a command:
 Enter event title: 
 Enter number of tickets to purchase: 
 Enter sellers username: 
-1 ticket | Total price: $100.00. Confirm? (Y/n): 
-Buy success!
-Logout Successful!
+Do you want to complete this purchase? (yes or no): 
+Purchase successful!
+Enter a command: 
+admin logged out successfully
+Enter a command: 
