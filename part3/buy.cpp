@@ -25,9 +25,11 @@ void buy(string* currentUser) {
 		return;
 	}
 	string clear;
-	getline(cin,clear);
+	//cin >> clear;
+	//getline(cin,clear);
 	cout << "Enter event title: ";
-	getline(cin,eventTitle);
+	//getline(cin,eventTitle);
+	cin >> eventTitle;
 	cout << "Enter number of tickets to purchase: ";
 	if(cin >> tickets) {
 	} else {
@@ -38,6 +40,13 @@ void buy(string* currentUser) {
 	cout << "Enter sellers username: ";
 	cin >> seller;
 
+	if((currentUser[1] == "BS" || currentUser[1] == "FS") && tickets >=5) {
+		cout << "Error: only admin can purchase more than 4 tickets at one time" << endl;
+		cin.clear();
+		return;
+	}
+
+	//cout << "SDOIUH";
 	buyTickets(currentUser,eventTitle,tickets,seller);
 }
 
@@ -70,6 +79,7 @@ bool buyTickets(string* currentUser,string eventTitle,int tickets,string seller)
 
 		titleCompare = removePadding(titleCompare);
 		sellerCompare = removePadding(sellerCompare);
+		//cout << tickets << endl << ticketCompare << endl;
 		if((eventTitle == titleCompare) && (tickets <= ticketCompare) && (seller == sellerCompare)) {
 			cout << ticketCompare << " Tickets available" << endl;
 			string confirm;
@@ -77,10 +87,10 @@ bool buyTickets(string* currentUser,string eventTitle,int tickets,string seller)
 			ticketPrice = stod(price);
 			cout << "Event found: price per ticket -> " << ticketPrice 
 				<< " Total price -> " << ticketPrice*tickets <<	endl;
-			if(tickets > ticketCompare){
+			/*if(tickets > ticketCompare){
 				cout << "Error: Ticket amount entered exceeds the amount of tickets available" << endl;
 				return false;
-			}
+			}*/
 			credit = stod(currentUser[2]);
 			if(tickets*ticketPrice > credit) {
 				cout << "Error: Not enough credit to complete purchase" << endl;

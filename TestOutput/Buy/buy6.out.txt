@@ -1,5 +1,7 @@
 Enter a command: Enter username: brokeuser FS 000000.00
 Log in successful!
-Enter a command: Enter event title: Enter number of tickets to purchase: Enter sellers username: Error: Invalid purchase, ensure that event and seller name are correct, and that enough tickets are available
+Enter a command: Enter event title: Enter number of tickets to purchase: Enter sellers username: 60 Tickets available
+Event found: price per ticket -> 10 Total price -> 40
+Error: Not enough credit to complete purchase
 Enter a command: brokeuser has been logged out successfully
 Enter a command: 

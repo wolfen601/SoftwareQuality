@@ -1,8 +1,11 @@
-Enter Command: 
-Enter Username: 
-Login Successful!
-Enter Command: 
-Enter the name of the event: 
-Enter the amount of tickets: 
-Error: Your account does not contain enough money
-Logout Successful!
+Enter a command: 
+Enter username: 
+Log in successful!
+Enter a command: 
+Enter event title: 
+Enter number of tickets to purchase: 
+Enter sellers username: 
+Error: Not enough credit to complete purchase
+Enter a command: 
+brokeuser has been logged out successfully
+Enter a command: 

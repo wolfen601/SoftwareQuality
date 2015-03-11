@@ -1,8 +1,9 @@
 login
 admin
 buy
-Second Event
+SecondEvent
 5
 user1
+yes
 logout
 quit

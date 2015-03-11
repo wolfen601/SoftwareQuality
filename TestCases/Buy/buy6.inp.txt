@@ -1,7 +1,7 @@
 login
 brokeuser
 buy
-Second Event
+SecondEvent
 4
 user1
 logout
