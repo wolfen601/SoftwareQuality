@@ -1,0 +1,22 @@
+- Successful DTF for every operation (i.e. successful create, addcredit, refund, etc.)
+
+CREATE:
+- fails because user exists
+
+DELETE:
+- fails because user does not exist
+
+SELL:
+- Event already exists
+
+BUY:
+- Event doesn't exist
+- Not enough tickets
+- Not enough credit
+
+REFUND:
+- If one user doesn't exist
+- If seller doesn't have enough credit
+
+ADDCREDIT:
+- user doesn't exist
