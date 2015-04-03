@@ -225,87 +225,88 @@ public class backEnd {
 	}
 
 	//removes tickets from the event, removes credit from users account
-	public static void buy(String fileLine) {
-		try {
-			Double cost = Double.parseDouble(fileLine.substring(35,38))*Double.parseDouble(fileLine.substring(39,45));
-			String line; String eventName; int tickets;
-			boolean eventExists = false;
-			FileReader oldTickets = new FileReader("oldAvailableTickets.txt");
-			BufferedReader oldTicketsReader = new BufferedReader(oldTickets);
-			FileWriter writer = new FileWriter("newAvailableTickets.txt");	
+		public static void buy(String fileLine) {
+			try {
+				Double cost = Double.parseDouble(fileLine.substring(35,38))*Double.parseDouble(fileLine.substring(39,45));
+				String line; String eventName; int tickets;
+				boolean eventExists = false;
+				FileReader oldTickets = new FileReader("oldAvailableTickets.txt");
+				BufferedReader oldTicketsReader = new BufferedReader(oldTickets);
+				FileWriter writer = new FileWriter("newAvailableTickets.txt");	
 
-			//subtract number of tickets from the event
-			while((line = oldTicketsReader.readLine()) != null) {
-				eventName = line.substring(0,18);
-				if(eventName.equals(fileLine.substring(0,18))) {
-					eventExists = true;
-					tickets = Integer.parseInt(line.substring(35,38));
-					String ticketString = addPadding("tickets",tickets-Integer.parseInt(fileLine.substring(35,38)),0);
-					fileLine = fileLine.replace(fileLine.substring(35,38),ticketString);
-					writer.write(fileLine+"\n");
-				} else {
-					writer.write(line+"\n");
+				//subtract number of tickets from the event
+				while((line = oldTicketsReader.readLine()) != null) {
+					eventName = line.substring(0,18);
+					if(eventName.equals(fileLine.substring(0,18))) {
+						eventExists = true;
+						tickets = Integer.parseInt(line.substring(35,38));
+						String ticketString = addPadding("tickets",tickets-Integer.parseInt(fileLine.substring(35,38)),0);
+						fileLine = fileLine.replace(fileLine.substring(35,38),ticketString);
+						writer.write(fileLine+"\n");
+					} else {
+						writer.write(line+"\n");
+					}
 				}
-			}
-			if (eventExists == false) {
-				System.out.println("Error: Buy failed, event does not exist");
-			}
-			oldTicketsReader.close();
-			writer.close();
-
-			/*FileReader oldUsers = new FileReader("oldCurrentUsers");
-			BufferedReader oldUsersReader = new BufferedReader(oldUsers);
-			FileWriter userWriter = new FileWriter("newCurrentUsers");
-			String username;
-			//subtract credit from the buyers account
-			while((line = oldUsersReader.readLine()) != null) {
-				username = line.substring(0,15);
-				if (username.equals(fileLine.substring(0,15))) {
-					System.out.println(Double.toString(Double.parseDouble(line.substring(19,28))-cost));
-					fileLine = fileLine.replace(line.substring(19,28),Double.toString(Double.parseDouble(line.substring(19,28))-cost));
+				if (eventExists == false) {
+					System.out.println("Error: Buy failed, event does not exist");
 				}
-			}
-			userWriter.write(fileLine+"\n");
-			oldUsersReader.close();
-			userWriter.close();*/
-		} catch(IOException e) {
+				oldTicketsReader.close();
+				writer.close();
 
+				/*FileReader oldUsers = new FileReader("oldCurrentUsers");
+				BufferedReader oldUsersReader = new BufferedReader(oldUsers);
+				FileWriter userWriter = new FileWriter("newCurrentUsers");
+				String username;
+				//subtract credit from the buyers account
+				while((line = oldUsersReader.readLine()) != null) {
+					username = line.substring(0,15);
+					if (username.equals(fileLine.substring(0,15))) {
+						System.out.println(Double.toString(Double.parseDouble(line.substring(19,28))-cost));
+						fileLine = fileLine.replace(line.substring(19,28),Double.toString(Double.parseDouble(line.substring(19,28))-cost));
+					}
+				}
+				userWriter.write(fileLine+"\n");
+				oldUsersReader.close();
+				userWriter.close();*/
+			} catch(IOException e) {
+
+			}
 		}
-	}
 
-	//will subtract credit from the first user and add credit
-	//to the second user
-	public static void refund(String fileLine) {
-		try {
-			Double amount = Double.parseDouble(fileLine.substring(35));
-			String line; 
-			boolean userExists = false;
-			FileReader oldUsers = new FileReader("oldCurrentUsers.txt");
-			BufferedReader oldUsersReader = new BufferedReader(oldUsers);
-			FileWriter writer = new FileWriter("newCurrentUsers.txt");
-			String user1="";
-			String user2="";
+		//will subtract credit from the first user and add credit
+		//to the second user
+		public static void refund(String fileLine) {
+			try {
+				Double amount = Double.parseDouble(fileLine.substring(35));
+				String line; 
+				boolean userExists = false;
+				FileReader oldUsers = new FileReader("oldCurrentUsers.txt");
+				BufferedReader oldUsersReader = new BufferedReader(oldUsers);
+				FileWriter writer = new FileWriter("newCurrentUsers.txt");
+				String user1="";
+				String user2="";
 
-			user1 = fileLine.substring(0,15);
-			user2 = fileLine.substring(19,34);
-			while((line = oldUsersReader.readLine()) != null) {
-				if(user1.equals(line.substring(0,15))) {
-					String creditString = addPadding("credit",0,Double.parseDouble(line.substring(19))+amount);
-					user1 = line.replace(line.substring(19),creditString);
-					writer.write(user1+"\n");
-				} else if (user2.equals(line.substring(0,15))) {
-					String creditString = addPadding("credit",0,Double.parseDouble(line.substring(19))-amount);
-					user2 = line.replace(line.substring(19),creditString);
-					writer.write(user2+"\n");
-				} else {
-					writer.write(line+"\n");
+				user1 = fileLine.substring(0,15);
+				user2 = fileLine.substring(16,31);
+				while((line = oldUsersReader.readLine()) != null) {
+					if(user1.equals(line.substring(0,15))) {
+						String creditString = addPadding("credit",0,Double.parseDouble(line.substring(19))+amount);
+						user1 = line.replace(line.substring(19),creditString);
+						writer.write(user1+"\n");
+					} else if (user2.equals(line.substring(0,15))) {
+						String creditString = addPadding("credit",0,Double.parseDouble(line.substring(19))-amount);
+						user2 = line.replace(line.substring(19),creditString);
+						writer.write(user2+"\n");
+					} else {
+						writer.write(line+"\n");
+					}
 				}
-			}
-			writer.close();
-		} catch(IOException e) {
+				oldUsersReader.close();
+				writer.close();
+			} catch(IOException e) {
 
+			}
 		}
-	}
 
 	//finds the user specified in the daily transaction file
 	//adds the amount of credit to their account and rewrites the users
@@ -325,23 +326,27 @@ public class backEnd {
 				username = line.substring(0,15);
 				if(username.equals(fileLine.substring(0,15))) { //if usernames are equal
 					//retrieve credit and amount to be added
-					credit = Double.parseDouble(line.substring(19,28));
-					addedCredit = Double.parseDouble(fileLine.substring(19,28));
+					credit = Double.parseDouble(line.substring(19));
+					addedCredit = Double.parseDouble(fileLine.substring(19));
 					credit = credit + addedCredit;
-					temp = Double.toString(credit);
-					
-					//add padding
-					len = temp.length();
-					len = 9 - len;
-					for (int i = 0; i<len ;i++ ) {
-						creditString += "0";
+					if(credit > 999999){
+						System.out.println("Error: Add credit failed, exceeds maximum amount");
+					}else{
+						temp = Double.toString(credit);
+						
+						//add padding
+						len = temp.length();
+						len = 9 - len;
+						for (int i = 0; i<len ;i++ ) {
+							creditString += "0";
+						}
+	
+						//convert to string and write to file string
+						creditString += temp;
+						line = line.replace(line.substring(19),creditString);
+						file += line;
+						file += "\n";
 					}
-
-					//convert to string and write to file string
-					creditString += temp;
-					line = line.replace(line.substring(19,28),creditString);
-					file += line;
-					file += "\n";
 				} else {
 					//make no changes to other lines
 					file += line;
@@ -358,7 +363,6 @@ public class backEnd {
 
 		}
 	}
-
 	public static String addPadding(String type,int tickets,double credit) {
 		if (type.equals("credit")) {
 			int len = String.valueOf(credit).length();
