@@ -1,2 +1,3 @@
 RandomEvent------- admin---------- 002 005.00
 SecondEvent------- user1---------- 086 010.00
+buyEvent---------- admin---------- 100 012.00

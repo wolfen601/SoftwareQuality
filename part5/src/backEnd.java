@@ -110,6 +110,10 @@ public class backEnd {
 					delete(fileLine);
 				} else if(opCode == 3) {	//sell
 					sell(fileLine);
+				} else if(opCode == 4) {	//buy
+					buy(fileLine);
+				} else if(opCode == 5) {	//refund
+					refund(fileLine);
 				} else if(opCode == 6) { 	//addcredit
 					addcredit(fileLine);
 				}
@@ -221,14 +225,86 @@ public class backEnd {
 	}
 
 	//removes tickets from the event, removes credit from users account
-	public static void buy() {
-		
+	public static void buy(String fileLine) {
+		try {
+			Double cost = Double.parseDouble(fileLine.substring(35,38))*Double.parseDouble(fileLine.substring(39,45));
+			String line; String eventName; int tickets;
+			boolean eventExists = false;
+			FileReader oldTickets = new FileReader("oldAvailableTickets.txt");
+			BufferedReader oldTicketsReader = new BufferedReader(oldTickets);
+			FileWriter writer = new FileWriter("newAvailableTickets.txt");	
+
+			//subtract number of tickets from the event
+			while((line = oldTicketsReader.readLine()) != null) {
+				eventName = line.substring(0,18);
+				if(eventName.equals(fileLine.substring(0,18))) {
+					eventExists = true;
+					tickets = Integer.parseInt(line.substring(35,38));
+					String ticketString = addPadding("tickets",tickets-Integer.parseInt(fileLine.substring(35,38)),0);
+					fileLine = fileLine.replace(fileLine.substring(35,38),ticketString);
+					writer.write(fileLine+"\n");
+				} else {
+					writer.write(line+"\n");
+				}
+			}
+			if (eventExists == false) {
+				System.out.println("Error: Buy failed, event does not exist");
+			}
+			oldTicketsReader.close();
+			writer.close();
+
+			/*FileReader oldUsers = new FileReader("oldCurrentUsers");
+			BufferedReader oldUsersReader = new BufferedReader(oldUsers);
+			FileWriter userWriter = new FileWriter("newCurrentUsers");
+			String username;
+			//subtract credit from the buyers account
+			while((line = oldUsersReader.readLine()) != null) {
+				username = line.substring(0,15);
+				if (username.equals(fileLine.substring(0,15))) {
+					System.out.println(Double.toString(Double.parseDouble(line.substring(19,28))-cost));
+					fileLine = fileLine.replace(line.substring(19,28),Double.toString(Double.parseDouble(line.substring(19,28))-cost));
+				}
+			}
+			userWriter.write(fileLine+"\n");
+			oldUsersReader.close();
+			userWriter.close();*/
+		} catch(IOException e) {
+
+		}
 	}
 
 	//will subtract credit from the first user and add credit
 	//to the second user
-	public static void refund() {
-		
+	public static void refund(String fileLine) {
+		try {
+			Double amount = Double.parseDouble(fileLine.substring(35));
+			String line; 
+			boolean userExists = false;
+			FileReader oldUsers = new FileReader("oldCurrentUsers.txt");
+			BufferedReader oldUsersReader = new BufferedReader(oldUsers);
+			FileWriter writer = new FileWriter("newCurrentUsers.txt");
+			String user1="";
+			String user2="";
+
+			user1 = fileLine.substring(0,15);
+			user2 = fileLine.substring(19,34);
+			while((line = oldUsersReader.readLine()) != null) {
+				if(user1.equals(line.substring(0,15))) {
+					String creditString = addPadding("credit",0,Double.parseDouble(line.substring(19))+amount);
+					user1 = line.replace(line.substring(19),creditString);
+					writer.write(user1+"\n");
+				} else if (user2.equals(line.substring(0,15))) {
+					String creditString = addPadding("credit",0,Double.parseDouble(line.substring(19))-amount);
+					user2 = line.replace(line.substring(19),creditString);
+					writer.write(user2+"\n");
+				} else {
+					writer.write(line+"\n");
+				}
+			}
+			writer.close();
+		} catch(IOException e) {
+
+		}
 	}
 
 	//finds the user specified in the daily transaction file
@@ -281,5 +357,38 @@ public class backEnd {
 		} catch(IOException e) {
 
 		}
+	}
+
+	public static String addPadding(String type,int tickets,double credit) {
+		if (type.equals("credit")) {
+			int len = String.valueOf(credit).length();
+			int index = Double.toString(credit).indexOf(".");
+
+			String decimalFix;
+			decimalFix = Double.toString(credit);
+			if ((len-1) - index < 2) {
+				decimalFix += "0";
+			}
+			len = decimalFix.length();
+			len = 9 - len;
+			String creditString = "";
+
+			for (int i =0;i<len;i++) {
+				creditString += "0";
+			}
+			creditString += decimalFix;
+			return creditString;
+		} else if(type.equals("tickets")){
+			int len = String.valueOf(tickets).length();
+			len = 3 - len;
+			String ticketString = "";
+
+			for (int i=0;i<len;i++) {
+				ticketString += "0";
+			}
+			ticketString += Integer.toString(tickets);
+			return ticketString;
+		} 
+		return "NOTHING HAPPENED";
 	}
 }
