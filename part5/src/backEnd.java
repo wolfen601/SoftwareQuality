@@ -114,7 +114,6 @@ public class backEnd {
 					addcredit(fileLine);
 				}
 			}
-
 			reader.close();
 		} catch(IOException e) {
 
@@ -223,13 +222,13 @@ public class backEnd {
 
 	//removes tickets from the event, removes credit from users account
 	public static void buy() {
-
+		
 	}
 
 	//will subtract credit from the first user and add credit
 	//to the second user
 	public static void refund() {
-
+		
 	}
 
 	//finds the user specified in the daily transaction file
@@ -254,7 +253,7 @@ public class backEnd {
 					addedCredit = Double.parseDouble(fileLine.substring(19,28));
 					credit = credit + addedCredit;
 					temp = Double.toString(credit);
-
+					
 					//add padding
 					len = temp.length();
 					len = 9 - len;

@@ -10,6 +10,7 @@ import org.junit.Test;
 public class backEndTest {
 	//reads the output stream
 	private final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
+	private backEnd tester = new backEnd();
 	//set the output stream
 	@Before
 	public void setUpStreams() {
@@ -19,6 +20,11 @@ public class backEndTest {
 	@After
 	public void cleanUpStreams() {
 	    System.setOut(null);
+	}
+	//testMain
+	@Test 
+	public void testMain() {
+		backEnd.main(null);
 	}
 	//test that the new current users file is made
 	@Test 
@@ -65,6 +71,7 @@ public class backEndTest {
 	//test the user exists to delete
 	@Test
 	public void testDeleteExisting() {
+		backEnd.create("user3---------- BS 000000.00");
 		backEnd.delete("user3---------- BS 000000.00");
 		assertEquals("", outContent.toString());
 	}
@@ -86,10 +93,18 @@ public class backEndTest {
 		backEnd.sell("RandomEvent2------ admin---------- 012 012.00");
 		assertEquals("", outContent.toString());
 	}
-
+	//test that the event must exist to be bought
 	@Test
-	public void testBuy() {
-		fail("Not yet implemented");
+	public void testBuy() {//"RandomEvent------- admin---------- 012 012.00"
+		backEnd.buy();
+		assertEquals("Error: Buy failed, event doesn't exist\r\n", outContent.toString());
+	}
+	//test that the transaction buy succeeds
+	@Test
+	public void testBuyExisting() {//"RandomEvent2------ admin---------- 012 012.00"
+		backEnd.sell("RandomEvent7------ admin---------- 012 012.00");
+		backEnd.buy();
+		assertEquals("", outContent.toString());
 	}
 
 	@Test
